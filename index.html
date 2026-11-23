@@ -282,6 +282,7 @@
     .footer-col a:hover{color:white}
     .footer-bottom .credit{color:#b5d3e2;font-weight:700}
     .footer-bottom .credit:hover{color:white}
+    .footer-bottom .credit-wrap{margin-left:auto;text-align:right}
     .footer-bottom{margin-top:45px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#7f99aa;font-size:12px}
 
     .whatsapp{
@@ -767,7 +768,7 @@
       <div class="footer-bottom">
         <span>© 2026 Sağlam Həyat Tibb Mərkəzi, Qəbələ. Bütün hüquqlar qorunur.</span>
         <span>Tel: +994 50 807 17 80</span>
-        <span>Sayt: <a href="https://sentri.az" target="_blank" rel="noopener" class="credit">Sentri Solutions</a></span>
+        <span class="credit-wrap">Created by <a href="https://sentri.az" target="_blank" rel="noopener" class="credit">Sentri Solutions</a></span>
       </div>
     </div>
   </footer>
@@ -789,15 +790,15 @@
     /* Həkim siyahısı — yeni həkim əlavə etmək üçün bu siyahıya bir sətir əlavə edin.
        photo: "images/ad-soyad.jpg" (istəyə bağlı) */
     const DOCTORS = [
-      { name: "Dr. Asif Hüseynov", spec: "Uroloq-Androloq", dept: "Urologiya", meta: "Kişi sonsuzluğu, böyrək daşı, sidik kisəsi daşlarının əməliyyatı", photo: "", ig: "https://www.instagram.com/p/DfUuBQCI6os/" },
+      { name: "Dr. Asif Hüseynov", spec: "Uroloq-Androloq", dept: "Urologiya", meta: "Kişi sonsuzluğu, böyrək daşı, sidik kisəsi daşlarının əməliyyatı", photo: "images/doctors/asif-huseynov.jpg?v=2", ig: "https://www.instagram.com/p/DfUuBQCI6os/" },
       { name: "Dr. Gülnar Məhəmmədzadə", spec: "Cərrah-ginekoloq", dept: "Ginekologiya", meta: "Hamiləliyin aparılması, keysəriyyə, ginekoloji əməliyyatlar", photo: "images/doctors/gulnar-mehemmedzade.jpg?v=2", ig: "https://www.instagram.com/p/DfSNoJIIn2J/" },
       { name: "Dr. Nigar Həsənova Eyyubova", spec: "Cərrah ginekoloq", dept: "Ginekologiya", meta: "Riskli hamiləlik, sonsuzluq, laparoskopik əməliyyatlar", photo: "images/doctors/nigar-hesenova.jpg?v=2", ig: "https://www.instagram.com/p/DfW5IZCoJJS/" },
-      { name: "Dr. Elnurə Mustafayeva", spec: "Ginekoloq, süni mayalanma mütəxəssisi", dept: "Ginekologiya", meta: "Süni mayalanma (IVF), sonsuzluq, hamiləliyin planlanması", photo: "", ig: "https://www.instagram.com/p/DfRKHZsIlkV/" },
+      { name: "Dr. Elnurə Mustafayeva", spec: "Ginekoloq, süni mayalanma mütəxəssisi", dept: "Ginekologiya", meta: "Süni mayalanma (IVF), sonsuzluq, hamiləliyin planlanması", photo: "images/doctors/elnure-mustafayeva.jpg?v=2", pos: "50% 10%", ig: "https://www.instagram.com/p/DfRKHZsIlkV/" },
       { name: "Dr. Ofeliya Səfərova", spec: "Nevroloq", dept: "Nevrologiya", meta: "EEQ, insult, epilepsiya, yuxu və yaddaş problemləri", photo: "images/doctors/ofeliya-seferova.jpg?v=2", ig: "https://www.instagram.com/p/DfpPOfnIMRC/" },
       { name: "Dr. Əfsanə Salamova", spec: "Radioloq", dept: "Radiologiya (USM)", meta: "Ultrasəs və Doppler müayinələri", photo: "images/doctors/efsane-salamova.jpg?v=2", ig: "https://www.instagram.com/p/DfaC7XPo86s/" },
       { name: "Dr. Novruz Əlimirzəyev", spec: "Cərrah, endoskopist, qastroenteroloq", dept: "Qastroenterologiya", meta: "Qastroskopiya, kolonoskopiya, polipektomiya, USM", photo: "images/doctors/novruz-elimirzeyev.jpg?v=2", ig: "https://www.instagram.com/p/DfVABvbx9Ah/" },
       { name: "Dr. Gündüz Məmmədov", spec: "Uzman pediatr", dept: "Pediatriya", meta: "Yenidoğulmuşların müayinəsi, böyümə və inkişafın izlənməsi", photo: "images/doctors/gunduz-memmedov.jpg?v=2", ig: "https://www.instagram.com/reel/De2FyMGos3e/" },
-      { name: "Dr. Nuranə Sadiqlı", spec: "Revmatoloq", dept: "Revmatologiya", meta: "Revmatoid artrit, podaqra, Behçet xəstəliyi", photo: "", ig: "https://www.instagram.com/p/DfQ_AFoI8-b/" },
+      { name: "Dr. Nuranə Sadiqlı", spec: "Revmatoloq", dept: "Revmatologiya", meta: "Revmatoid artrit, podaqra, Behçet xəstəliyi", photo: "images/doctors/nurane-sadiqli.jpg?v=2", ig: "https://www.instagram.com/p/DfQ_AFoI8-b/" },
       { name: "Dr. Ruhib Rəhimov", spec: "Dermatoveneroloq", dept: "Dermatologiya", meta: "Dəri, saç və dırnaq xəstəlikləri · hər bazar 09:00–13:00", photo: "images/doctors/ruhib-rehimov.jpg?v=2", ig: "https://www.instagram.com/p/DeyMhLaIEVN/" },
       { name: "Dr. Ziyadxan Abdullayev", spec: "Psixiatr", dept: "Psixiatriya", meta: "Stress, panik atak, depressiya, yuxu pozuntuları", photo: "images/doctors/ziyadxan-abdullayev.jpg?v=2", ig: "https://www.instagram.com/p/Deyl7fxInHX/" },
       { name: "Dr. İlqar İsmayılov", spec: "Kardioloq", dept: "Kardiologiya", meta: "EXO, EKQ, hipertoniya və ürək-damar xəstəlikləri", photo: "images/doctors/ilqar-ismayilov.jpg?v=2", ig: "" },
@@ -809,7 +810,7 @@
       { name: "Dr. Aynur Həmidova", spec: "Cərrah-oftalmoloq", dept: "Oftalmologiya", meta: "Göz xəstəliklərinin müayinəsi və cərrahi müalicəsi", photo: "images/doctors/aynur-hemidova.jpg?v=2", ig: "" },
       { name: "Dr. Nəsrəddin Əmirov", spec: "Radioloq", dept: "Radiologiya (USM)", meta: "Ultrasəs və Doppler müayinələri", photo: "images/doctors/nesreddin-emirov.jpg?v=2", ig: "" },
       { name: "Dr. Elnarə Söhbətova", spec: "Həkim-stomatoloq", dept: "Stomatologiya", meta: "Diş müalicəsi və ağız boşluğunun sağlamlığı", photo: "images/doctors/elnare-sohbetova.jpg?v=2", ig: "" },
-      { name: "Dr. Elbrus Tohmazov", spec: "LOR həkimi", dept: "LOR", meta: "Qulaq, burun və boğaz xəstəlikləri, endoskopik müayinə", photo: "", ig: "" },
+      { name: "Dr. Elbrus Tohmazov", spec: "LOR həkimi", dept: "LOR", meta: "Qulaq, burun və boğaz xəstəlikləri, endoskopik müayinə", photo: "images/doctors/elbrus-tohmazov.jpg?v=2", ig: "" },
     ];
     /* Xidmət ikonları (SVG path-lər, 24x24) */
     const ICONS = {
