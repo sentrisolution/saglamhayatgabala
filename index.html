@@ -139,8 +139,7 @@
       position:absolute;inset:30px 0 0 40px;border-radius:36px;overflow:hidden;
       box-shadow:0 28px 80px rgba(16,60,95,.18);
       background:
-        linear-gradient(180deg,rgba(10,45,78,.04),rgba(10,45,78,.45)),
-        url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=88') center/cover;
+        linear-gradient(180deg,rgba(10,45,78,.04),rgba(10,45,78,.45));
     }
     .hero-badge{
       position:absolute;left:0;bottom:62px;background:white;border-radius:20px;padding:18px 20px;
@@ -170,7 +169,7 @@
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
     .about-visual{
       min-height:520px;border-radius:32px;overflow:hidden;
-      background:url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1200&q=88') center/cover;
+      background:url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=88') center/cover;
       box-shadow:var(--shadow);position:relative
     }
     .about-float{
@@ -201,8 +200,7 @@
     .doctor-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
     .doctor-photo{
       aspect-ratio:4/4.2;background:
-        linear-gradient(180deg,transparent 60%,rgba(10,45,78,.16)),
-        url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=78') center/cover;
+        linear-gradient(180deg,transparent 60%,rgba(10,45,78,.16));
     }
     .doctor-body{padding:20px}
     .doctor-body h3{margin:0;color:var(--navy);font-size:18px}
@@ -210,20 +208,6 @@
     .doctor-meta{font-size:12px;color:var(--muted)}
     .doctor-actions{display:flex;gap:8px;margin-top:16px}
     .doctor-actions .btn{min-height:42px;padding:0 14px;font-size:12px;flex:1}
-
-    /* CHECKUP */
-    .checkup{background:var(--grad);color:white;position:relative;overflow:hidden}
-    .checkup:before{
-      content:"";position:absolute;width:520px;height:520px;border-radius:50%;
-      border:1px solid rgba(255,255,255,.07);right:-180px;top:-180px
-    }
-    .checkup .section-title{color:white}
-    .checkup .section-text{color:#e2f3f9}
-    .checkup-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
-    .check-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:26px;backdrop-filter:blur(8px)}
-    .check-card h3{font-size:20px;margin:15px 0 8px}
-    .check-card p{font-size:14px;color:#e2f3f9}
-    .check-card .small-link{display:inline-block;margin-top:12px;color:white;font-weight:800;font-size:13px}
 
     /* WHY */
     .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
@@ -322,7 +306,7 @@
       .quick-grid{grid-template-columns:1fr 1fr}
       .quick-card:nth-child(2){border-right:none}
       .quick-card:nth-child(-n+2){border-bottom:1px solid #edf3f6}
-      .dept-grid,.doctor-grid{grid-template-columns:repeat(2,1fr)}
+      .dept-grid{grid-template-columns:repeat(2,1fr)}
       .why-grid{grid-template-columns:repeat(2,1fr)}
       .footer-grid{grid-template-columns:1.4fr 1fr 1fr}
       .footer-grid .footer-col:last-child{grid-column:2/4}
@@ -344,7 +328,7 @@
       .about-visual{min-height:390px}
       .checks{grid-template-columns:1fr}
       .head-row{align-items:flex-start;flex-direction:column}
-      .dept-grid,.doctor-grid,.checkup-grid,.why-grid{grid-template-columns:1fr}
+      .dept-grid,.why-grid{grid-template-columns:1fr}
       .cta-box{padding:34px 24px;flex-direction:column;align-items:flex-start}
       .cta-actions{justify-content:flex-start}
       .form-fields{grid-template-columns:1fr}
@@ -388,6 +372,65 @@
     .doctor-photo img{object-position:50% 20%}
     .doctor-card.highlight{box-shadow:0 0 0 3px var(--cyan),var(--shadow)}
     .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+    /* LOQO QIRMIZISI — vurğu elementləri */
+    :root{--red:#d41d21;--red-2:#b5161a;--red-soft:#fdeced}
+    .eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red);flex:0 0 auto}
+    .menu a:after{background:var(--red)}
+    .btn-accent{background:linear-gradient(135deg,var(--red),var(--red-2));color:#fff;box-shadow:0 12px 28px rgba(212,29,33,.25)}
+    .btn-accent:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(212,29,33,.33)}
+    .trust-dot,.check-bullet{background:var(--red-soft);color:var(--red)}
+    .section-title:after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--red);margin-top:14px}
+    .cta-box h2:after,.info-panel h3:after{content:none}
+    .hero-dots button.active{background:var(--red)}
+    .doctor-tag{border-left:3px solid var(--red)}
+    footer{border-top:4px solid var(--red)}
+
+    /* XİDMƏTLƏR — ikonlar */
+    .dept-icon svg{width:24px;height:24px}
+    .dept-card .dept-icon{transition:.25s}
+    .dept-card:hover .dept-icon{background:var(--red-soft);color:var(--red)}
+    .dept-card{min-height:0}
+    .why-card .dept-icon{color:var(--blue)}
+
+    /* HƏKİMLƏR — slider */
+    .doc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+    .slider-nav{display:flex;gap:10px}
+    .slider-nav button{width:48px;height:48px;border-radius:14px;border:1px solid #dce9f1;background:#fff;color:var(--navy);display:grid;place-items:center;cursor:pointer;transition:.2s}
+    .slider-nav button:hover:not(:disabled){background:var(--red);border-color:var(--red);color:#fff}
+    .slider-nav button:disabled{opacity:.35;cursor:default}
+    .doctor-grid{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 2px 18px;margin-top:18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .doctor-grid::-webkit-scrollbar{display:none}
+    .doctor-card{flex:0 0 calc((100% - 54px)/4);scroll-snap-align:start;display:flex;flex-direction:column}
+    .doctor-body{flex:1;display:flex;flex-direction:column}
+    .doctor-actions{margin-top:auto;padding-top:16px}
+    .slider-progress{height:4px;border-radius:4px;background:#e3eef4;overflow:hidden;margin-top:4px}
+    .slider-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:4px;transition:width .2s}
+    @media (max-width:1100px){.doctor-card{flex-basis:calc((100% - 36px)/3)}}
+    @media (max-width:820px){.doctor-card{flex-basis:calc((100% - 18px)/2)}}
+    @media (max-width:520px){.doctor-card{flex-basis:84%}.slider-nav button{width:42px;height:42px}}
+
+    /* ONLAYN MÜRACİƏT — sıxılma/üst-üstə düşmə düzəlişi */
+    .form-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:40px}
+    .form-grid>*{min-width:0}
+    .info-panel{padding:36px 32px}
+    .info-panel h3{font-size:clamp(24px,2.4vw,30px);line-height:1.25;margin:18px 0 12px}
+    .info-panel p{line-height:1.65;margin:0}
+    .info-list{gap:20px}
+    .info-line{gap:14px;align-items:flex-start}
+    .info-line>div{min-width:0}
+    .info-line strong{font-size:15px;line-height:1.35;margin-bottom:3px}
+    .info-line div span{display:block;font-size:14px;line-height:1.5}
+    .info-line .info-circle{width:40px;height:40px;background:var(--red);color:#fff;font-weight:800;font-size:15px}
+    form{padding:32px}
+    .form-fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+    .field{min-width:0}
+    input,select,textarea{width:100%;min-width:0;max-width:100%;font-size:15px;line-height:1.4}
+    select{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+    .form-note{line-height:1.5}
+    .field.full .btn{width:100%}
+    @media (max-width:1100px){.form-grid{grid-template-columns:minmax(0,1fr)}}
+    @media (max-width:680px){.form-fields{grid-template-columns:minmax(0,1fr)}.info-panel,form{padding:24px 20px}}
   </style>
 </head>
 <body>
@@ -404,15 +447,15 @@
       <nav class="menu" aria-label="Əsas menyu">
         <a href="#home">Ana səhifə</a>
         <a href="#about">Haqqımızda</a>
-        <a href="#departments">Şöbələr</a>
+        <a href="#departments">Xidmətlər</a>
         <a href="#doctors">Həkimlər</a>
-        <a href="#checkup">Check-up</a>
+        <a href="#appointment">Onlayn müraciət</a>
         <a href="#contact">Əlaqə</a>
       </nav>
 
       <div class="nav-actions">
         <span class="phone-mini">+994 50 807 17 80</span>
-        <a href="#appointment" class="btn btn-primary">Qəbula yazıl</a>
+        <a href="#appointment" class="btn btn-accent">Qəbula yazıl</a>
       </div>
 
       <button class="burger" id="burger" aria-label="Menyunu aç">
@@ -425,11 +468,11 @@
     <div class="mobile-menu" id="mobileMenu">
       <a href="#home">Ana səhifə</a>
       <a href="#about">Haqqımızda</a>
-      <a href="#departments">Şöbələr</a>
+      <a href="#departments">Xidmətlər</a>
       <a href="#doctors">Həkimlər</a>
-      <a href="#checkup">Check-up</a>
+      <a href="#appointment">Onlayn müraciət</a>
       <a href="#contact">Əlaqə</a>
-      <a href="#appointment" class="btn btn-primary">Qəbula yazıl</a>
+      <a href="#appointment" class="btn btn-accent">Qəbula yazıl</a>
     </div>
   </header>
 
@@ -445,17 +488,17 @@
               Qəbula yazıl
               <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </a>
-            <a href="#departments" class="btn btn-light">Şöbələrimiz</a>
+            <a href="#departments" class="btn btn-light">Xidmətlərimiz</a>
           </div>
           <div class="trust-row">
             <div class="trust-item"><span class="trust-dot">✓</span> Peşəkar tibbi heyət</div>
             <div class="trust-item"><span class="trust-dot">✓</span> Müasir avadanlıq</div>
-            <div class="trust-item"><span class="trust-dot">✓</span> Qəbələdə 2 korpus</div>
+            <div class="trust-item"><span class="trust-dot">✓</span> Fərdi yanaşma</div>
           </div>
         </div>
 
         <div class="hero-visual reveal">
-          <div class="hero-card"><div class="hero-slides" id="heroSlides"><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Müasir diaqnostika</b><small>Ən son tibbi avadanlıqla dəqiq nəticə</small></div></div><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Peşəkar həkim heyəti</b><small>Təcrübəli mütəxəssislər xidmətinizdə</small></div></div><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Qəbələdə yanınızdayıq</b><small>H. Aslanov küçəsi 102 və 49</small></div></div></div><div class="hero-dots" id="heroDots"><button class="active"></button><button></button><button></button></div></div>
+          <div class="hero-card"><div class="hero-slides" id="heroSlides"><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Müasir diaqnostika</b><small>Ən son tibbi avadanlıqla dəqiq nəticə</small></div></div><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Peşəkar həkim heyəti</b><small>Təcrübəli mütəxəssislər xidmətinizdə</small></div></div><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Qəbələdə yanınızdayıq</b><small>H. Aslanov küçəsi 102 və 49</small></div></div></div><div class="hero-dots" id="heroDots"><button class="active"></button><button></button><button></button></div></div>
           <div class="mini-card">
             <strong>Pasiyent yönümlü xidmət</strong>
             <span>Rahatlıq, diqqət və fərdi yanaşma</span>
@@ -491,12 +534,12 @@
           <h3>Həkim tap</h3>
           <p>İxtisas üzrə uyğun həkimi seçin.</p>
         </a>
-        <a class="quick-card" href="#checkup">
+        <a class="quick-card" href="#departments">
           <div class="quick-icon">
-            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 12h4l2-5 4 10 2-5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M11 2v2M5 2v2M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1M8 15a6 6 0 0 0 12 0v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="10" r="2" stroke="currentColor" stroke-width="1.8"/></svg>
           </div>
-          <h3>Check-up proqramları</h3>
-          <p>Sağlamlığınızı vaxtında yoxlayın.</p>
+          <h3>Xidmətlərimiz</h3>
+          <p>Tibbi istiqamətlər və müayinələr.</p>
         </a>
         <a class="quick-card" href="tel:+994508071780">
           <div class="quick-icon">
@@ -537,8 +580,8 @@
         <div class="head-row reveal">
           <div>
             <span class="eyebrow">Tibbi istiqamətlər</span>
-            <h2 class="section-title">Şöbələrimiz</h2>
-            <p class="section-text">Hər şöbədə qəbul aparan həkimlərimiz göstərilib — adın üzərinə klikləyin, həkimin kartına keçin.</p>
+            <h2 class="section-title">Xidmətlərimiz</h2>
+            <p class="section-text">Sağlam Həyat Tibb Mərkəzində müxtəlif tibbi istiqamətlər üzrə müayinə, diaqnostika və müalicə xidmətləri göstərilir.</p>
           </div>
           <a href="#appointment" class="btn btn-light">Qəbula yazıl</a>
         </div>
@@ -549,44 +592,21 @@
 
     <section class="section" id="doctors">
       <div class="container">
-        <div class="reveal">
-          <span class="eyebrow">Tibbi komanda</span>
-          <h2 class="section-title">Peşəkar həkim komandamız</h2>
-          <p class="section-text">İxtisas üzrə həkiminizi seçin və birbaşa qəbula yazılın. Həkimlərimiz haqqında yeniliklər Instagram səhifəmizdədir.</p>
+        <div class="doc-head reveal">
+          <div>
+            <span class="eyebrow">Tibbi komanda</span>
+            <h2 class="section-title">Həkimlərimiz</h2>
+            <p class="section-text">İxtisas üzrə həkiminizi seçin və birbaşa qəbula yazılın. Kartları sağa-sola sürüşdürərək bütün həkimlərimizə baxın.</p>
+          </div>
+          <div class="slider-nav">
+            <button type="button" id="docPrev" aria-label="Əvvəlki həkimlər"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button type="button" id="docNext" aria-label="Növbəti həkimlər"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
         </div>
 
         <div class="doc-filter" id="docFilter" role="tablist" aria-label="İxtisas üzrə filtr"></div>
         <div class="doctor-grid" id="doctorGrid"></div>
-      </div>
-    </section>
-
-    <section class="section checkup" id="checkup">
-      <div class="container">
-        <div class="reveal">
-          <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#cdeffa">Profilaktik müayinə</span>
-          <h2 class="section-title">Sağlamlığınızı bu gün yoxlayın</h2>
-          <p class="section-text">Profilaktik müayinələr bir çox xəstəliyin erkən mərhələdə aşkarlanmasına kömək edir. Check-up proqramlarımız fərdi ehtiyaclara uyğun müayinələrin bir araya gətirilməsi prinsipi ilə hazırlanır.</p>
-        </div>
-        <div class="checkup-grid">
-          <div class="check-card reveal">
-            <div class="dept-icon">✓</div>
-            <h3>Ümumi Check-up</h3>
-            <p>Əsas profilaktik müayinələr və ümumi sağlamlıq vəziyyətinin qiymətləndirilməsi.</p>
-            <a class="small-link" href="#appointment">Müraciət et →</a>
-          </div>
-          <div class="check-card reveal">
-            <div class="dept-icon">♀</div>
-            <h3>Qadınlar üçün Check-up</h3>
-            <p>Qadın sağlamlığına yönəlmiş əsas müayinələrin bir proqramda birləşdirilməsi.</p>
-            <a class="small-link" href="#appointment">Müraciət et →</a>
-          </div>
-          <div class="check-card reveal">
-            <div class="dept-icon">♂</div>
-            <h3>Kişilər üçün Check-up</h3>
-            <p>Kişi sağlamlığının profilaktik qiymətləndirilməsi üçün nəzərdə tutulan müayinə proqramı.</p>
-            <a class="small-link" href="#appointment">Müraciət et →</a>
-          </div>
-        </div>
+        <div class="slider-progress" aria-hidden="true"><span id="docProgress"></span></div>
       </div>
     </section>
 
@@ -597,12 +617,12 @@
           <h2 class="section-title">Niyə Sağlam Həyat?</h2>
         </div>
         <div class="why-grid">
-          <div class="why-card reveal"><div class="dept-icon">✚</div><h3>Peşəkar tibbi heyət</h3><p>Pasiyentlərimizə ixtisaslaşmış tibbi heyət tərəfindən diqqətli xidmət göstərilməsi əsas prioritetlərimizdəndir.</p></div>
-          <div class="why-card reveal"><div class="dept-icon">⌁</div><h3>Müasir texnologiyalar</h3><p>Diaqnostika və müalicədə müasir tibbi yanaşmalardan və avadanlıqlardan istifadə.</p></div>
-          <div class="why-card reveal"><div class="dept-icon">♥</div><h3>Pasiyent yönümlü yanaşma</h3><p>Hər bir pasiyentin ehtiyaclarına diqqət və fərdi yanaşma.</p></div>
-          <div class="why-card reveal"><div class="dept-icon">▦</div><h3>Kompleks tibbi xidmət</h3><p>Müxtəlif tibbi istiqamətlərin bir mərkəzdə birləşdirilməsi.</p></div>
-          <div class="why-card reveal"><div class="dept-icon">◇</div><h3>Rahat və müasir mühit</h3><p>Pasiyentlərin rahatlığı nəzərə alınmaqla hazırlanmış tibbi infrastruktur.</p></div>
-          <div class="why-card reveal"><div class="dept-icon">⌖</div><h3>Rahat ünvan</h3><p>Qəbələ şəhərində iki korpus: H. Aslanov küçəsi 102 və 49.</p></div>
+          <div class="why-card reveal"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1M16 3.1a4 4 0 0 1 0 7.8M22 21v-1a6 6 0 0 0-4-5.6"/></svg></div><h3>Peşəkar tibbi heyət</h3><p>Pasiyentlərimizə ixtisaslaşmış tibbi heyət tərəfindən diqqətli xidmət göstərilməsi əsas prioritetlərimizdəndir.</p></div>
+          <div class="why-card reveal"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M6 11h2.5l1.5-3 2.5 5 1.5-2H18"/></svg></div><h3>Müasir texnologiyalar</h3><p>Diaqnostika və müalicədə müasir tibbi yanaşmalardan və avadanlıqlardan istifadə.</p></div>
+          <div class="why-card reveal"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg></div><h3>Pasiyent yönümlü yanaşma</h3><p>Hər bir pasiyentin ehtiyaclarına diqqət və fərdi yanaşma.</p></div>
+          <div class="why-card reveal"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg></div><h3>Kompleks tibbi xidmət</h3><p>Müxtəlif tibbi istiqamətlərin bir mərkəzdə birləşdirilməsi.</p></div>
+          <div class="why-card reveal"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z"/><path d="M12 10v6M9 13h6"/></svg></div><h3>Rahat və müasir mühit</h3><p>Pasiyentlərin rahatlığı nəzərə alınmaqla hazırlanmış tibbi infrastruktur.</p></div>
+          <div class="why-card reveal"><div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h3>Rahat ünvan</h3><p>Qəbələ şəhəri, H. Aslanov küçəsi 102 və 49.</p></div>
         </div>
       </div>
     </section>
@@ -625,7 +645,7 @@
     <section class="section appointment" id="appointment">
       <div class="container form-grid">
         <div class="info-panel reveal">
-          <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#cdeffa">Online müraciət</span>
+          <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#cdeffa">Onlayn müraciət</span>
           <h3>Həkim qəbuluna yazılın</h3>
           <p>Müraciət məlumatlarını doldurun. Əməkdaşlarımız sizinlə əlaqə saxlayaraq uyğun qəbul vaxtını dəqiqləşdirəcək.</p>
           <div class="info-list">
@@ -646,9 +666,9 @@
               <input id="phone" name="phone" placeholder="+994 XX XXX XX XX" required />
             </div>
             <div class="field">
-              <label for="department">Şöbə</label>
+              <label for="department">Xidmət</label>
               <select id="department" name="department">
-                <option value="">Şöbə seçin</option>
+                <option value="">Xidmət seçin</option>
               </select>
             </div>
             <div class="field">
@@ -667,7 +687,7 @@
               <select id="type" name="type">
                 <option>İlk müraciət</option>
                 <option>Təkrar qəbul</option>
-                <option>Check-up</option>
+                <option>Müayinə / diaqnostika</option>
               </select>
             </div>
             <div class="field full">
@@ -723,14 +743,13 @@
           <h4>Mərkəz</h4>
           <a href="#about">Haqqımızda</a>
           <a href="#doctors">Həkimlər</a>
-          <a href="#departments">Şöbələr</a>
-          <a href="#checkup">Check-up</a>
+          <a href="#departments">Xidmətlər</a>
         </div>
 
         <div class="footer-col">
           <h4>Pasiyentlər üçün</h4>
           <a href="#appointment">Qəbula yazıl</a>
-          <a href="#checkup">Check-up proqramları</a>
+          <a href="#doctors">Həkim seçin</a>
           <a href="#contact">Tez-tez verilən suallar</a>
         </div>
 
@@ -792,27 +811,50 @@
       { name: "Dr. Elnarə Söhbətova", spec: "Həkim-stomatoloq", dept: "Stomatologiya", meta: "Diş müalicəsi və ağız boşluğunun sağlamlığı", photo: "images/doctors/elnare-sohbetova.jpg?v=2", ig: "" },
       { name: "Dr. Elbrus Tohmazov", spec: "LOR həkimi", dept: "LOR", meta: "Qulaq, burun və boğaz xəstəlikləri, endoskopik müayinə", photo: "", ig: "" },
     ];
-    /* Şöbələr — həkimi olan şöbələr avtomatik birinci göstərilir */
+    /* Xidmət ikonları (SVG path-lər, 24x24) */
+    const ICONS = {
+      female: '<circle cx="12" cy="8.5" r="5.5"/><path d="M12 14v8M8.5 18.5h7"/>',
+      male: '<circle cx="10" cy="14" r="5.5"/><path d="M14 10l6.5-6.5M15.5 3.5h5v5"/>',
+      brain: '<path d="M9.5 3A3 3 0 0 0 6.6 5.3 3 3 0 0 0 4.3 9.5a3 3 0 0 0 .4 5.2A3 3 0 0 0 9.5 20.8 2.5 2.5 0 0 0 12 19V5.5A2.5 2.5 0 0 0 9.5 3Z"/><path d="M14.5 3a3 3 0 0 1 2.9 2.3 3 3 0 0 1 2.3 4.2 3 3 0 0 1-.4 5.2 3 3 0 0 1-4.8 6.1A2.5 2.5 0 0 1 12 19"/><path d="M8 9.5c1 0 2 .7 2 2M16 9.5c-1 0-2 .7-2 2"/>',
+      ultrasound: '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M8 13a5 5 0 0 1 8 0M9.8 10.6a2.5 2.5 0 0 1 4.4 0"/>',
+      stomach: '<path d="M9 2.5v4c0 2-3.5 3-3.5 7.5A6.5 6.5 0 0 0 12 20.5h1c4.5 0 7.5-2.5 7.5-6.5 0-3-2-4.5-4.2-4.5-2 0-2.8 1.3-4.3.6-.9-.4-1-1.6-1-2.6V2.5"/><path d="M5.5 15c-1.5 1-2.5 2.5-2.5 4.5"/>',
+      baby: '<circle cx="12" cy="13" r="7.5"/><path d="M9.5 12.5h.01M14.5 12.5h.01"/><path d="M10 16c1.2.9 2.8.9 4 0"/><path d="M12 5.5c0-1.7 1.3-3 3-3"/>',
+      bone: '<path d="M17 10c.7-.7 1.7 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .8.7 1.8 0 2.5l-7 7c-.7.7-1.7 0-2.5 0a2.5 2.5 0 0 0 0 5c.3 0 .5.2.5.5a2.5 2.5 0 1 0 5 0c0-.8-.7-1.8 0-2.5Z"/>',
+      skin: '<path d="M3 7.5c3-2 6 2 9 0s6-2 9 0M3 12.5c3-2 6 2 9 0s6-2 9 0M3 17.5c3-2 6 2 9 0s6-2 9 0"/>',
+      mind: '<path d="M14.5 21v-2.5a1.5 1.5 0 0 1 1.5-1.5h1.2a1.8 1.8 0 0 0 1.8-1.8V13l1.6-.8c.3-.2.4-.6.2-.9L19 9A7.5 7.5 0 0 0 4 9.5c0 2.3 1 4 2.5 5.4V21"/><path d="M12.5 12.8s-2.8-1.6-2.8-3.4a1.5 1.5 0 0 1 2.8-.8 1.5 1.5 0 0 1 2.8.8c0 1.8-2.8 3.4-2.8 3.4Z"/>',
+      ear: '<path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/>',
+      heart: '<path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/><path d="M3.2 12H8l1.5-3 3 5 1.5-2h6.6"/>',
+      drop: '<path d="M12 2.5s6.5 7 6.5 11.5a6.5 6.5 0 0 1-13 0C5.5 9.5 12 2.5 12 2.5Z"/><path d="M12 11v6M9 14h6"/>',
+      ribbon: '<path d="M12 3a3.8 3.8 0 0 0-3.8 3.8c0 2.6 1.9 5 3.8 7.4 1.9-2.4 3.8-4.8 3.8-7.4A3.8 3.8 0 0 0 12 3Z"/><path d="M9.6 11.8 5 20l3-.6 1.4 2.6 3.7-6.6M14.4 11.8 19 20l-3-.6-1.4 2.6-3.7-6.6"/>',
+      eye: '<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',
+      stethoscope: '<path d="M11 2v2M5 2v2M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/>',
+      kidney: '<path d="M8.5 3C5 3 3 6.5 3 11s2.2 10 6.5 10c2.3 0 3-1.8 3-3.5 0-1.8-1.7-2.6-1.7-4.6 0-2 1.7-2.8 1.7-5.4 0-2.6-1.4-4.5-4-4.5Z"/><path d="M12 12h2.5c2.5 0 4 1.8 4 4.5V21"/>',
+      virus: '<circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/><path d="M10.5 11h.01M13.5 13.5h.01"/>',
+      tooth: '<path d="M7 3C4.5 3 3 5 3 7.5c0 2 .8 3.4 1.5 5 .8 2 1 4 1.5 6.5.3 1.4 1 2 1.8 2 1.2 0 1.5-1.3 1.8-3 .3-1.6.8-3 2.4-3s2.1 1.4 2.4 3c.3 1.7.6 3 1.8 3 .8 0 1.5-.6 1.8-2 .5-2.5.7-4.5 1.5-6.5.7-1.6 1.5-3 1.5-5C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3Z"/>',
+      flask: '<path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7 15h10"/>'
+    };
+    const svgIcon = k => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[k]||ICONS.stethoscope}</svg>`;
+    /* Xidmətlər — həkimi olan istiqamətlər avtomatik birinci göstərilir */
     const DEPTS = [
-      { name: "Ginekologiya", icon: "✚", desc: "Qadın sağlamlığı, hamiləliyin aparılması, süni mayalanma." },
-      { name: "Urologiya", icon: "◇", desc: "Uroloji və androloji xəstəliklərin müayinəsi və müalicəsi." },
-      { name: "Nevrologiya", icon: "✦", desc: "Sinir sistemi xəstəlikləri, EEQ müayinəsi." },
-      { name: "Radiologiya (USM)", icon: "▣", desc: "Ultrasəs, Doppler və neyrosonoqrafiya müayinələri." },
-      { name: "Qastroenterologiya", icon: "⌁", desc: "Endoskopiya, qastroskopiya, kolonoskopiya." },
-      { name: "Pediatriya", icon: "◌", desc: "Uşaqların sağlamlığı və inkişafının izlənməsi." },
-      { name: "Revmatologiya", icon: "✣", desc: "Oynaq və birləşdirici toxuma xəstəlikləri." },
-      { name: "Dermatologiya", icon: "❀", desc: "Dəri, saç və dırnaq xəstəlikləri." },
-      { name: "Psixiatriya", icon: "☁", desc: "Psixi sağlamlıq, stress və depressiyanın müalicəsi." },
-      { name: "LOR", icon: "◍", desc: "Qulaq, burun, boğaz xəstəlikləri və əməliyyatları." },
-      { name: "Kardiologiya", icon: "♥", desc: "EXO, EKQ, hipertoniya və ürək-damar xəstəlikləri." },
-      { name: "Endokrinologiya", icon: "◈", desc: "Diabet, qalxanabənzər vəz, hormonal pozğunluqlar." },
-      { name: "Mammologiya", icon: "♀", desc: "Süd vəzi xəstəliklərinin diaqnostikası və cərrahiyyəsi." },
-      { name: "Oftalmologiya", icon: "◉", desc: "Göz sağlamlığının müayinəsi və nəzarəti." },
-      { name: "Terapiya", icon: "✚", desc: "Daxili xəstəliklərin diaqnostikası və müalicəsi." },
-      { name: "Nefrologiya", icon: "◇", desc: "Böyrək xəstəliklərinin müayinəsi və müalicəsi." },
-      { name: "İnfeksion xəstəliklər", icon: "✣", desc: "Hepatitlər və infeksion xəstəliklərin müalicəsi." },
-      { name: "Stomatologiya", icon: "◌", desc: "Diş müalicəsi və ağız boşluğunun sağlamlığı." },
-      { name: "Laboratoriya", icon: "⚗", desc: "Geniş çeşidli laborator analizlər, infeksiya və hepatit testləri." },
+      { name: "Ginekologiya", icon: "female", desc: "Qadın sağlamlığı, hamiləliyin aparılması, süni mayalanma." },
+      { name: "Urologiya", icon: "male", desc: "Uroloji və androloji xəstəliklərin müayinəsi və müalicəsi." },
+      { name: "Nevrologiya", icon: "brain", desc: "Sinir sistemi xəstəlikləri, EEQ müayinəsi." },
+      { name: "Radiologiya (USM)", icon: "ultrasound", desc: "Ultrasəs, Doppler və neyrosonoqrafiya müayinələri." },
+      { name: "Qastroenterologiya", icon: "stomach", desc: "Endoskopiya, qastroskopiya, kolonoskopiya." },
+      { name: "Pediatriya", icon: "baby", desc: "Uşaqların sağlamlığı və inkişafının izlənməsi." },
+      { name: "Revmatologiya", icon: "bone", desc: "Oynaq və birləşdirici toxuma xəstəlikləri." },
+      { name: "Dermatologiya", icon: "skin", desc: "Dəri, saç və dırnaq xəstəlikləri." },
+      { name: "Psixiatriya", icon: "mind", desc: "Psixi sağlamlıq, stress və depressiyanın müalicəsi." },
+      { name: "LOR", icon: "ear", desc: "Qulaq, burun, boğaz xəstəlikləri və əməliyyatları." },
+      { name: "Kardiologiya", icon: "heart", desc: "EXO, EKQ, hipertoniya və ürək-damar xəstəlikləri." },
+      { name: "Endokrinologiya", icon: "drop", desc: "Diabet, qalxanabənzər vəz, hormonal pozğunluqlar." },
+      { name: "Mammologiya", icon: "ribbon", desc: "Süd vəzi xəstəliklərinin diaqnostikası və cərrahiyyəsi." },
+      { name: "Oftalmologiya", icon: "eye", desc: "Göz sağlamlığının müayinəsi və nəzarəti." },
+      { name: "Terapiya", icon: "stethoscope", desc: "Daxili xəstəliklərin diaqnostikası və müalicəsi." },
+      { name: "Nefrologiya", icon: "kidney", desc: "Böyrək xəstəliklərinin müayinəsi və müalicəsi." },
+      { name: "İnfeksion xəstəliklər", icon: "virus", desc: "Hepatitlər və infeksion xəstəliklərin müalicəsi." },
+      { name: "Stomatologiya", icon: "tooth", desc: "Diş müalicəsi və ağız boşluğunun sağlamlığı." },
+      { name: "Laboratoriya", icon: "flask", desc: "Geniş çeşidli laborator analizlər, infeksiya və hepatit testləri." },
     ];
     (function(){
       const grid=document.getElementById('doctorGrid'), filt=document.getElementById('docFilter'), sel=document.getElementById('doctor');
@@ -821,18 +863,20 @@
       const ini=n=>n.replace(/^Dr\.?\s*/i,'').split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase();
       function card(d){return `<article class="doctor-card" id="doc-${slug(d.name)}"><div class="doctor-photo">${d.photo?`<img src="${esc(d.photo)}" alt="${esc(d.name)}" loading="lazy"${d.pos?` style="object-position:${esc(d.pos)}"`:''}>`:`<span class="doctor-initials">${esc(ini(d.name))}</span>`}<span class="doctor-tag">${esc(d.dept)}</span></div><div class="doctor-body"><h3>${esc(d.name)}</h3><div class="doctor-spec">${esc(d.spec)}</div><div class="doctor-meta">${esc(d.meta||'')}</div><div class="doctor-actions">${d.ig?`<a href="${esc(d.ig)}" target="_blank" rel="noopener" class="btn btn-light">Ətraflı</a>`:`<a href="tel:+994508071780" class="btn btn-light">Zəng et</a>`}<a href="#appointment" class="btn btn-primary" data-doc="${esc(d.name)}" data-dept="${esc(d.dept)}">Qəbula yazıl</a></div></div></article>`}
       const more=`<article class="doctor-card more"><div class="doctor-photo"><span class="doctor-initials">+</span></div><div class="doctor-body"><h3>Bütün həkimlərimiz</h3><div class="doctor-spec">Instagram səhifəmizdə</div><div class="doctor-meta">Həkimlərin qəbul günləri və yeniliklər</div><div class="doctor-actions"><a href="https://www.instagram.com/saglamheyattibbmerkezi/" target="_blank" rel="noopener" class="btn btn-primary">Instagram</a></div></div></article>`;
-      function render(f){grid.innerHTML=DOCTORS.filter(d=>!f||d.dept===f).map(card).join('')+more;}
+      const prev=document.getElementById('docPrev'), next=document.getElementById('docNext'), prog=document.getElementById('docProgress');
+      function updNav(){const max=grid.scrollWidth-grid.clientWidth;prev.disabled=grid.scrollLeft<=4;next.disabled=grid.scrollLeft>=max-4;prog.style.width=(max>0?Math.max(grid.clientWidth/grid.scrollWidth*100,(grid.scrollLeft+grid.clientWidth)/grid.scrollWidth*100):100)+'%';}
+      function step(dir){const c=grid.querySelector('.doctor-card');const w=c?c.getBoundingClientRect().width+18:300;const per=Math.max(1,Math.floor((grid.clientWidth+18)/w));grid.scrollBy({left:dir*w*per,behavior:'smooth'});}
+      prev.onclick=()=>step(-1);next.onclick=()=>step(1);
+      grid.addEventListener('scroll',updNav,{passive:true});window.addEventListener('resize',updNav);
+      function render(f){grid.innerHTML=DOCTORS.filter(d=>!f||d.dept===f).map(card).join('')+more;grid.scrollLeft=0;requestAnimationFrame(updNav);}
       const depts=[...new Set(DOCTORS.map(d=>d.dept))];
       if(depts.length>1){filt.innerHTML=['Hamısı',...depts].map((d,i)=>`<button class="${i?'':'active'}" data-f="${i?esc(d):''}">${esc(d)}</button>`).join('');
         filt.onclick=e=>{const b=e.target.closest('button');if(!b)return;filt.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));render(b.dataset.f);};}
       render('');
       const dg=document.getElementById('deptGrid'), dsel=document.getElementById('department');
       const sorted=[...DEPTS].sort((a,b)=>(DOCTORS.some(d=>d.dept===b.name)?1:0)-(DOCTORS.some(d=>d.dept===a.name)?1:0));
-      dg.innerHTML=sorted.map(dp=>{const ds=DOCTORS.filter(d=>d.dept===dp.name);return `<div class="dept-card"><div class="dept-icon">${dp.icon}</div><h3>${esc(dp.name)}</h3><p>${esc(dp.desc)}</p><div class="dept-docs">${ds.length?ds.map(d=>`<a href="#doc-${slug(d.name)}" data-jump="${esc(d.name)}">${esc(d.name)}</a>`).join(''):'<span class="none">Qəbul günləri üçün zəng edin</span>'}</div></div>`}).join('');
+      dg.innerHTML=sorted.map(dp=>`<div class="dept-card"><div class="dept-icon">${svgIcon(dp.icon)}</div><h3>${esc(dp.name)}</h3><p>${esc(dp.desc)}</p></div>`).join('');
       sorted.forEach(dp=>{const o=document.createElement('option');o.textContent=dp.name;dsel.appendChild(o);});
-      dg.addEventListener('click',e=>{const a=e.target.closest('[data-jump]');if(!a)return;const name=a.dataset.jump;const d=DOCTORS.find(x=>x.name===name);
-        filt.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x.dataset.f===''));render('');
-        setTimeout(()=>{const c=document.getElementById('doc-'+slug(name));if(c){c.classList.add('highlight');setTimeout(()=>c.classList.remove('highlight'),2200);}},50);});
       DOCTORS.forEach(d=>{const o=document.createElement('option');o.textContent=d.name+' — '+d.spec;o.value=d.name;sel.appendChild(o);});
       grid.addEventListener('click',e=>{const a=e.target.closest('[data-doc]');if(!a)return;sel.value=a.dataset.doc;const dep=document.getElementById('department');[...dep.options].forEach(o=>{if(o.text===a.dataset.dept)dep.value=o.text;});});
     })();
@@ -856,7 +900,7 @@
       e.preventDefault();
       const f = new FormData(form);
       const lines = ['Salam! Qəbula yazılmaq istəyirəm.', 'Ad: '+f.get('name'), 'Telefon: '+f.get('phone')];
-      if(f.get('department')) lines.push('Şöbə: '+f.get('department'));
+      if(f.get('department')) lines.push('Xidmət: '+f.get('department'));
       if(f.get('doctor')) lines.push('Həkim: '+f.get('doctor'));
       if(f.get('date')) lines.push('Tarix: '+f.get('date'));
       lines.push('Növ: '+f.get('type'));
