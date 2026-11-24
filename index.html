@@ -142,12 +142,12 @@
         linear-gradient(180deg,rgba(10,45,78,.04),rgba(10,45,78,.45));
     }
     .hero-badge{
-      position:absolute;left:0;bottom:62px;background:white;border-radius:20px;padding:18px 20px;
-      box-shadow:var(--shadow);display:flex;align-items:center;gap:14px;max-width:290px
+      position:absolute;z-index:3;left:22px;bottom:22px;background:var(--grad);color:white;border-radius:20px;padding:18px 20px;
+      display:flex;align-items:center;gap:14px;max-width:300px
     }
-    .hero-badge .badge-icon{width:48px;height:48px;border-radius:14px;background:var(--soft);display:grid;place-items:center;color:var(--cyan)}
-    .hero-badge strong{display:block;color:var(--navy)}
-    .hero-badge span{font-size:13px;color:var(--muted)}
+    .hero-badge .badge-icon{flex:0 0 auto;width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.18);display:grid;place-items:center;color:#fff}
+    .hero-badge strong{display:block;color:#fff;font-size:16px}
+    .hero-badge span{font-size:13px;color:#dcf1f8}
     .mini-card{
       position:absolute;right:-18px;top:12px;width:180px;padding:16px 18px;border-radius:20px;
       background:rgba(255,255,255,.94);box-shadow:var(--shadow);backdrop-filter:blur(8px)
@@ -320,7 +320,8 @@
       .hero p,.section-text{font-size:16px}
       .hero-visual{min-height:390px}
       .hero-card{border-radius:26px}
-      .hero-badge{left:10px;right:10px;bottom:16px;max-width:none}
+      .hero-badge{left:14px;right:14px;bottom:40px;max-width:none;padding:14px 16px}
+      .hero-dots{right:auto;left:50%;transform:translateX(-50%);bottom:16px}
       .mini-card{right:8px;top:8px;width:160px}
       .quick-wrap{margin-top:18px}
       .quick-grid{grid-template-columns:1fr}
@@ -343,10 +344,11 @@
     .hero-card{background:none}
     .hero-slides{display:flex;height:100%;transition:transform .8s cubic-bezier(.65,0,.35,1)}
     .hero-slide{flex:0 0 100%;height:100%;position:relative;background-size:cover;background-position:center}
-    .hero-slide:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,76,109,.08),rgba(19,103,145,.7))}
-    .hero-slide .cap{position:absolute;z-index:2;left:28px;right:28px;top:28px;color:#fff}
+    .hero-slide:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,34,56,.78) 0%,rgba(8,34,56,.35) 30%,rgba(8,34,56,.05) 55%,rgba(8,34,56,.55) 100%)}
+    .hero-slide .cap{position:absolute;z-index:2;left:28px;right:28px;top:28px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.45)}
     .hero-slide .cap b{display:block;font-size:22px;font-weight:700;line-height:1.25}
-    .hero-slide .cap small{font-size:14px;opacity:.9}
+    .hero-slide .cap small{font-size:15px;font-weight:600;opacity:1}
+    .hero-slide .cap.cap-right{left:auto;max-width:55%;text-align:right}
     .hero-dots{position:absolute;z-index:3;right:24px;bottom:24px;display:flex;gap:8px}
     .hero-dots button{width:10px;height:10px;border-radius:99px;border:0;background:rgba(255,255,255,.55);cursor:pointer;padding:0;transition:.3s}
     .hero-dots button.active{width:28px;background:#fff}
@@ -499,8 +501,7 @@
         </div>
 
         <div class="hero-visual reveal">
-          <div class="hero-card"><div class="hero-slides" id="heroSlides"><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Müasir diaqnostika</b><small>Ən son tibbi avadanlıqla dəqiq nəticə</small></div></div><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Peşəkar həkim heyəti</b><small>Təcrübəli mütəxəssislər xidmətinizdə</small></div></div><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Qəbələdə yanınızdayıq</b><small>H. Aslanov küçəsi 102 və 49</small></div></div></div><div class="hero-dots" id="heroDots"><button class="active"></button><button></button><button></button></div></div>
-          <div class="hero-badge">
+          <div class="hero-card"><div class="hero-slides" id="heroSlides"><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Müasir diaqnostika</b><small>Ən son tibbi avadanlıqla dəqiq nəticə</small></div></div><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1200&q=85')"><div class="cap cap-right"><b>Peşəkar həkim heyəti</b><small>Təcrübəli mütəxəssislər xidmətinizdə</small></div></div><div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85')"><div class="cap"><b>Qəbələdə yanınızdayıq</b><small>H. Aslanov küçəsi 102 və 49</small></div></div></div><div class="hero-badge">
             <div class="badge-icon">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
                 <path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z" stroke="currentColor" stroke-width="1.8"/>
@@ -510,7 +511,7 @@
               <strong>Sağlamlığınız bizim prioritetimizdir</strong>
               <span>Etibar etdiyiniz tibbi xidmət bir məkanda.</span>
             </div>
-          </div>
+          </div><div class="hero-dots" id="heroDots"><button class="active"></button><button></button><button></button></div></div>
         </div>
       </div>
     </section>
